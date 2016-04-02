@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="windows.ResultWindowController">
+   <children>
+   
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="66.0" prefWidth="197.0">
+            <children>
+               <Label fx:id="resultLabel" layoutX="182.0" layoutY="14.0" text="Ты невероятно крут!" textAlignment="CENTER">
+                  <font>
+                     <Font name="Comic Sans MS" size="24.0" />
+                  </font>
+                  <textFill>
+                     <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                           <Stop color="#d93716" />
+                           <Stop color="#bfbe5b" offset="1.0" />
+                        </stops>
+                     </LinearGradient>
+                  </textFill>
+               </Label>
+            <Button fx:id="replayButton" layoutX="273.0" layoutY="249.0" mnemonicParsing="false" text="Начать заново" />
+            </children>
+      </AnchorPane>
+         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <image>
+               <Image url="@../drawable/top_result.gif" />
+            </image>
+         </ImageView>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
