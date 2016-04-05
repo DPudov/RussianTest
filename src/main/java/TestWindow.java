@@ -11,12 +11,13 @@ import java.io.IOException;
 public class TestWindow {
     TestWindowController testWindowController;
 
-    public TestWindow(String name) throws IOException {
+    public TestWindow(String name, boolean sex) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/test_scene.fxml"));
         GridPane titledPane = loader.load();
         testWindowController = loader.getController();
         testWindowController.setName(name);
+        testWindowController.setSex(sex);
         Stage stage = new Stage();
         Scene scene = new Scene(titledPane);
         stage.setTitle("Тест");

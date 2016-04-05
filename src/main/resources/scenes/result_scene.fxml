@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ResultWindowController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ResultWindowController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -19,7 +19,7 @@
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label fx:id="resultLabel" alignment="CENTER" layoutX="12.0" layoutY="7.0" prefHeight="87.0" prefWidth="623.0" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="resultLabel" alignment="CENTER" layoutX="12.0" layoutY="1.0" prefHeight="138.0" prefWidth="623.0" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="Comic Sans MS Bold" size="24.0" />
                </font>
@@ -36,7 +36,7 @@
       </Pane>
       <Pane prefHeight="192.0" prefWidth="643.0" GridPane.rowIndex="1">
          <children>
-            <ImageView fx:id="resultImage" fitHeight="198.0" fitWidth="257.0" layoutX="193.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="resultImage" fitHeight="215.0" fitWidth="268.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">

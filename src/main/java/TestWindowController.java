@@ -34,6 +34,7 @@ public class TestWindowController {
     private ToggleGroup toggleGroup = new ToggleGroup();
     private Task task;
     private String name;
+    private boolean sex;
 
     @FXML
     public void initialize() throws IOException {
@@ -96,7 +97,7 @@ public class TestWindowController {
                     task.counter++;
                     if (task.counter == 11) {
                         try {
-                            new ResultWindow(task.rightSolvedCounter, name);
+                            new ResultWindow(task.rightSolvedCounter, name, sex);
 
                             checkButton.getScene().getWindow().hide();
                         } catch (IOException e) {
@@ -161,8 +162,13 @@ public class TestWindowController {
             System.out.println("No matching rowAsk was found.");
         }
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
     }
 }
 

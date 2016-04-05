@@ -10,11 +10,11 @@ import java.io.IOException;
  */
 public class ResultWindow {
     ResultWindowController resultWindowController;
-    public ResultWindow(int rightSolvedCount, String name) throws IOException {
+    public ResultWindow(int rightSolvedCount, String name, boolean sex) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/result_scene.fxml"));
         GridPane titledPane = loader.load();
         resultWindowController = loader.getController();
-        resultWindowController.setUpResults(rightSolvedCount, name);
+        resultWindowController.setUpResults(rightSolvedCount, name, sex);
         Stage stage = new Stage();
         Scene scene = new Scene(titledPane);
         stage.setTitle("Результаты");

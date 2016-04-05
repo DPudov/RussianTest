@@ -22,6 +22,7 @@ public class ResultWindowController {
     Button replayButton;
     private int rightSolvedCount;
     private String name;
+    private boolean sex;
 
     @FXML
     public void initialize() {
@@ -34,24 +35,35 @@ public class ResultWindowController {
                 }
             }
         });
-        setUpResults(rightSolvedCount, name);
+        setUpResults(rightSolvedCount, name, sex);
     }
 
 
-    public void setUpResults(int rightSolvedCount, String name) {
+    public void setUpResults(int rightSolvedCount, String name, boolean sex) {
+        this.sex = sex;
         this.name = name;
         this.rightSolvedCount = rightSolvedCount;
         if (rightSolvedCount == 10 || rightSolvedCount == 9) {
-            resultLabel.setText(name + ", ты неверо€тно крут! " + rightSolvedCount + "/10");
+            if (sex) {
+                resultLabel.setText(name + ", ты неверо€тно крут! " + rightSolvedCount + "/10");
+            } else
+                resultLabel.setText(name + ", ты неверо€тно крута! " + rightSolvedCount + "/10");
             resultImage.setImage(new Image("drawable/top_result.gif"));
+
         } else if (rightSolvedCount == 8 || rightSolvedCount == 7) {
-            resultLabel.setText(name + "! /n Ќеплохо, но есть над чем поработать. " + rightSolvedCount + "/10");
+            resultLabel.setText(name + "! Ќеплохо, но есть над чем поработать. " + rightSolvedCount + "/10");
             resultImage.setImage(new Image("drawable/applodismenty.gif"));
         } else if (rightSolvedCount == 6 || rightSolvedCount == 5) {
-            resultLabel.setText(name + "! “ы " + "был " + "на грани фола. Ќужно больше тренировок! " + rightSolvedCount + "/10");
+            if (sex)
+                resultLabel.setText(name + "! “ы " + "был " + "на грани фола. Ќужно больше тренировок! " + rightSolvedCount + "/10");
+            else
+                resultLabel.setText(name + "! “ы " + "была " + "на грани фола. Ќужно больше тренировок! " + rightSolvedCount + "/10");
             resultImage.setImage(new Image("drawable/pulpfictiondance1.gif"));
         } else if (rightSolvedCount < 5) {
-            resultLabel.setText(name + ", у мен€ дл€ теб€ плохие новости. “ы не справилс€ с заданием:( " + rightSolvedCount + "/10");
+            if (sex)
+                resultLabel.setText(name + ", у мен€ дл€ теб€ плохие новости. “ы не справилс€ с заданием:( " + rightSolvedCount + "/10");
+            else
+                resultLabel.setText(name + ", у мен€ дл€ теб€ плохие новости. “ы не справилась с заданием:( " + rightSolvedCount + "/10");
             resultImage.setImage(new Image("drawable/schwach.gif"));
         }
 
